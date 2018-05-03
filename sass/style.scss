@@ -1,5 +1,4 @@
 $font-primary: 'Roboto', Arial, serif;
-// Overrides
 $grid-gutter-width: 50px !default; 
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
@@ -24,8 +23,6 @@ $input-border-focus: $brand-primary !default;
 $form-group-margin-bottom: 30px !default;
 
 
-
-// Mixin
 @mixin transition($transition) {
     -moz-transition:    all $transition ease;
     -o-transition:      all $transition ease;
@@ -77,7 +74,6 @@ $form-group-margin-bottom: 30px !default;
 }
 
 @mixin icomoon() {
-	
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -85,28 +81,12 @@ $form-group-margin-bottom: 30px !default;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-
-	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
 }
-
-// Import 
 @import 'bootstrap/mixins';
 @import 'bootstrap/variables';
 
-
-
-
-/* =======================================================
-*
-* 	Template Style 
-*	Edit this section
-*
-* ======================================================= */
-
-// Template Base
 body {
 	font-family: $font-primary;
 	line-height: 1.8;
@@ -407,10 +387,6 @@ header{
 	}
 }
 
-/////////////
-
-
-
 
 .owl-theme .owl-controls .owl-nav {
 	@media screen and (max-width: $screen-sm) {
@@ -454,7 +430,6 @@ header{
 	background: $brand-white;
 }
 
-// item
 .item{
 	position: relative;
 	.pop-up-overlay{
@@ -499,64 +474,6 @@ header{
 	&:hover, &:focus{
 		.pop-up-overlay{
 			opacity: 1; 
-		}
-	}
-}
-
-// SERVICES
-.services-num{
-	position: relative;
-	.number-holder{
-		position: absolute;
-		font-size: 100px;
-		font-weight: 700;
-		top: 0;
-		left: 15px;
-		line-height: 100px;
-		color: $brand-black;
-	}
-	.desc{
-		padding-left: 140px;
-		h3{
-			font-weight: 300;
-			line-height: 26px;
-			font-size: 24px;
-			margin-bottom: 8px;
-		}
-	}
-	&.services-num-text-right{
-		text-align: right;
-		.number-holder{
-			right: 15px;
-		}
-		.desc{
-			padding-left: 0;
-			padding-right: 140px;
-		}
-		@media screen and (max-width: $screen-sm){
-			text-align: left;
-			.number-holder{
-				right: 0;
-				left: 15px;
-			}
-			.desc{
-				padding-left: 140px;
-				padding-right: 0;
-			}
-
-		}
-		@media screen and (max-width: $screen-xs){
-			.desc{
-				padding-left: 80px;
-			}
-		}
-	}
-	@media screen and (max-width: $screen-xs){
-		.number-holder{
-			font-size: 50px;
-		}
-		.desc{
-			padding-left: 80px;
 		}
 	}
 }
@@ -728,176 +645,10 @@ header{
 	background: $brand-senary !important;
 }
 
-
-// BLOG
-.blog-section{
-	@media screen and (max-width: $screen-md){
-		margin-bottom: 80px;	
-	}
-	span{
-		display: block;
-		font-size: 80px;
-		color: $brand-black;
-		line-height: 0;
-		margin-bottom: 60px;
-		font-weight: 700;
-		position: relative;
-		small{
-			position: absolute;
-			top: 0;
-			font-size: 16px;
-			color: rgba($brand-lighter,.8);
-			font-weight: 300;
-			line-height: 0;
-			margin-left: 20px;
-		}
-	}
-	h3{
-		margin-bottom: 10px;
-		a{
-			color: $brand-black;
-		}
-	}
-}
-
-//WORK
-.bwu-grid-work{
-	margin-bottom: 60px;
-	.work-holder{
-		position: relative;
-		margin-bottom: 30px;
-		img{
-			max-width: 100%;
-		}
-		.inner-overlay{
-			display: block;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background: rgba($brand-primary,.9);
-			opacity: 0;
-			i{
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				margin-left: -10px;
-				margin-top: -10px;
-				color: $brand-white;
-				font-size: 30px;
-			}
-			&.inner-overlay-2{
-				background: rgba($brand-secondary,.9);
-			}
-			&.inner-overlay-3{
-				background: rgba($brand-tertiary,.9);
-			}
-			&.inner-overlay-4{
-				background: rgba($brand-quaternary,.9);
-			}
-			&.inner-overlay-4{
-				background: rgba($brand-quinary,.9);
-			}
-			&.inner-overlay-5{
-				background: rgba($brand-senary,.9);
-			}
-		}
-	}
-	.desc{
-		h3{
-			font-size: 20px;
-			margin-bottom: 10px;
-			a{
-				color: $brand-black;
-			}
-		}
-		span{
-			color: rgba($brand-lighter,.5);
-			font-size: 16px;
-		}
-	}
-	&:hover, &:focus{
-		.inner-overlay{
-			opacity: 1;
-		}
-	}
-}
-
-
-//ABOUT
-.about{
-	padding-bottom: 5em;
-	img{
-		margin-bottom: 50px;
-	}
-	.team-section-grid{
-		position: relative;
-		background-size: cover;
-		height: 450px;
-		margin-bottom: 30px;
-		.overlay-section{
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background: rgba($brand-black,.5);
-			opacity: 0;
-			@include transition(.6s);
-			h3{
-				color: $brand-white;
-				margin-bottom: 10px;
-				font-size: 24px;
-			}
-			p{
-				color: rgba($brand-white,.8);
-				&.bwu-social-icons{
-					a{
-						&:hover, &:focus{
-							text-decoration: none !important;
-						}
-					}
-					i{
-						font-size: 32px;
-					}
-				}
-			}
-			span{
-				color: $brand-white;
-				display: block;
-			}
-			.desc{
-				position: absolute;
-				bottom: 0;
-				left: 30px;
-				right: 30px;
-			}
-		}
-		&:hover{
-			.overlay-section{
-				opacity: 1;
-			}
-		}
-	}
-	.bwu-social-icons {
-		a {
-			color: rgba(255,255,255,.7);
-			cursor: pointer;
-			@include transition(.5s);
-			&:hover {
-				color: rgba(255,255,255,1);
-			}
-		}
-	}
-}
-
-//CONTACT
 .contact-info{
 	margin-bottom: 4em;
 	padding: 0;
 	li{
-		// font-size: 16px;
 		list-style: none;
 		margin: 0 0 20px 0;
 		position: relative;
